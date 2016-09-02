@@ -50,14 +50,13 @@ gulp.task('js', function() {
 
 gulp.task('compass', function() {
   gulp.src(sassSources)
-    .pipe(gulpif (env === 'production', sourcemaps.init()))
     .pipe(compass({
+      sourcemap: true,
       css: outputDir + 'css',
       sass: 'components/sass',
       image: outputDir + 'images',
       style: sassStyle
     })
-    .pipe(gulpif (env === 'production', sourcemaps.write()))
     .on('error', gutil.log))
     .pipe(connect.reload())
 });
