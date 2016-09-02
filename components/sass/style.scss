@@ -1,15 +1,8 @@
-// Compass imports - See http://compass-style.org/reference/compass/ for more options
-@import "compass";
-@import "compass/reset";
+@import "compass/css3/transition";
 
-// CSS Framework (uncomment desired css framework) 
-// Already include as npm dependency (see package.json)
-
-/* Bootstrap */
-// Bootstrap: @import 'bootstrap-custom';
-
-/* http://bourbon.io/ */
-// Bourbon Neat: @import "neat";
+// Bootstrap
+@import "../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "../../bower_components/font-awesome/scss/font-awesome.scss";
  
 // Core partials
 @import "variables";
