@@ -3,4 +3,6 @@ node_modules
 .tmp
 .sass-cache
 builds/**/images/*
+builds/production/
 bower_components/
+builds/development/css/style.css.map
