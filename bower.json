@@ -1,0 +1,22 @@
+{
+  "name": "IntercollegiateCMS",
+  "description": "Front End Web Development Task Manager Workflow",
+  "main": "",
+  "authors": [
+    "Josue Mora"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "fontawesome#^4.6.3",
+    "bootstrap-sass": "^3.3.7"
+  }
+}
