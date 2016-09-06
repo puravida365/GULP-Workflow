@@ -1,4 +1,6 @@
 var gulp = require('gulp'),
+    stylish = require('jshint-stylish'),
+    jshint = require('gulp-jshint'),
     gutil = require('gulp-util'),
     browserify = require('gulp-browserify'),
     compass = require('gulp-compass'),
@@ -37,7 +39,14 @@ sassSources = ['components/sass/style.scss'];
 htmlSources = [outputDir + '*.html'];
 jsonSources = [outputDir + 'js/*.json'];
 
-gulp.task('js', function() {
+gulp.task('lint', function() {
+  return gulp.src(jsSources)
+    .pipe(jshint())
+    .pipe(jshint.reporter('jshint-stylish'))
+    .pipe(jshint.reporter('fail'));
+});
+
+gulp.task('js', ['lint'], function() {
   gulp.src(jsSources)
     .pipe(concat('script.js'))
     .pipe(gulpif (env === 'production', sourcemaps.init()))
