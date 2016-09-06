@@ -7,3 +7,4 @@ builds/production/
 bower_components/
 builds/development/css/style.css
 builds/development/css/style.css.map
+builds/development/js/*.js
